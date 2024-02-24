@@ -1,0 +1,10 @@
+def faktöriyel (sayı):
+    faktöriyel=1 
+    if (sayı == 1 or sayı == 0):
+        print("faktöriyel",faktöriyel)
+    else:
+        while (sayı >= 1):
+            faktöriyel *= sayı
+            sayı -= 1
+            print("faktöriyel",faktöriyel)
+            
