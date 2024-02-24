@@ -1,0 +1,39 @@
+print("""*******************************
+
+atm makinesine hoş geldiniz
+
+işlemler;
+
+1. bakiye sorgulama
+
+2.para yatırma 
+
+3.para çekme
+
+çıkmak için "q" ya basınız
+***************************************
+""")
+bakiye = 1000
+
+a = input("işlem için 1,2 veya 3 yazınız")
+while True:
+    if a == "q":
+        print("tekrar bekleriz")
+        break
+    if a == "1":
+        print("bakiyeniz {} ".format(bakiye))
+        break
+    elif a == "2":
+        miktar = int(input("miktar giriniz"))
+        bakiye += miktar
+        print("yeni bakiyeniz {} dir ".format(bakiye))
+    elif a == "3":
+        miktar = int(input("miktar giriniz"))
+        bakiye -= miktar
+        if (bakiye - miktar) <0:
+            print("babali çekemezsin")
+        print("yeni bakiyeniz {} dir ".format(bakiye))
+        continue
+    else:
+        print("geçersiz işlem")
+        break
